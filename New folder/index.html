@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link rel="stylesheet" href="styles.css">
+        <title> Document </title>
+    </head>
+
+    <body>
+        <!--navbar-->
+        <nav class="navbar">
+            <div class="navbar-center">
+                <img src="logo.png" alt="store logo" width="60">
+                <ul id="navebar-n">                 
+                    <li><a href="#1" class="active">HOME</a></li>    
+                    <li><a href="#2">Shop</a></li>
+                    <li><a href="#3">Contact</a></li> 
+                </ul>
+                <div class="cart-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>               
+                    <div class="cart-items">0</div>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+
+    <section id="1">
+            <!-- Login -->
+            <div class="section-p1">  
+                <button onclick="document.getElementById('login').style.display=
+                'block'" style="width:auto;">Login</button>
+        
+                <div id="login" class="modal">
+            
+                    <form class="modal-content animate" action="action" method="post">
+                        
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+        
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                                
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+        
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('login').style.display=
+                            'none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+        
+                <!-- End Login -->
+            
+                <!-- SignUp -->           
+                <button onclick="document.getElementById('SignUp').style.display='block'" 
+                style="width:auto;">Sign Up</button>
+        
+                <div id="SignUp" class="modal">
+                <span onclick="document.getElementById('SignUp').style.display='none'" 
+                class="close" title="Close Modal">&times;</span>
+                <form class="modal-content" action="/action_page.php">
+                    <div class="container">
+                        <h1>Sign Up</h1>
+                        <p>Please fill in this form to create an account.</p>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="id"><b>ID</b></label>
+                        <input type="text" placeholder="Enter ID" name="id" required>
+
+                        <label for="bank-num"><b>Bank number</b></label>
+                        <input type="text" placeholder="Bank number" name="bank-num" required>
+        
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
+        
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('SignUp').style.display=
+                            'none'" class="cancelbtn">Cancel</button>
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    <!-- End SignUp -->
+    </section>
+
+        <section class="section-p1">
+
+            <form>
+                <i class="fas fa-search"></i>
+                <input type="text" name="" id="search-item" placeholder="Search products"
+                onkeyup="search()">
+            </form>
+        </section>
+
+        <!--products 1-->
+         <section class="products" id="2">
+           <div class="section-title">
+            <h2> Manual Tools</h2>
+           </div>
+           <div class="products-center" id="product-list">
+            <!-- single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/12-16-TineWeldedBowRake.webp"
+                     alt="product"
+                    class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3> 16-Tine Welded Bow Rake  </h3>
+                <h5>
+                    16 teeth 4.5mm thickness steel head <br>
+                    Hardwood handle<br>
+                    Comfortable non-slip end grip<br>
+                    Powder-coated finish for rust resistance<br>
+                </h5>
+                <h4> eg 15 </h4>
+            </article>
+            <!-- end single product-->
+            <!-- single product-->           
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/10-SteelHoewithHardwoodHandle.webp" 
+                         alt="product" 
+                         class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3> Steel Hoe with Hardwood Handle </h3>
+                <h5>
+                    30 prong polyresin head<br>Hardwood handle<br>Non-slip end grip
+                </h5>
+                <h4>eg 15 </h4>
+            </article>
+            <!-- end single product-->
+            <!-- single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/AluminumLandscapeRake.webp " 
+                        alt="product"
+                        class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3> 36 in. Aluminum Landscape Rake </h3>
+                <h5>
+                    Aluminum head<br>Fiberglass handle with middle grip <br>Non-slip 2-tone end grip
+                </h5>
+                <h4> eg 15 </h4>
+            </article>
+            <!-- end single product-->
+            <!-- single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/9-6-TineForgedSteelManureFork.webp" 
+                         alt="product" 
+                         class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3> 6-Tine Forged Steel Manure Fork </h3>
+                <h5>The steel manure fork comes with a 48 inch wood handle that lets you keep whatever you are transferring a healthy distance away from yourself
+                    <br>*Rust resistant steel fork is perfectly suited to dirty work and all weather use</h5>
+                <h4>eg 15 </h4>
+            </article>
+            <!-- end single product-->
+            <!-- single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/1-1LeafRake.webp" 
+                         alt="product"
+                         class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3>Leaf Rake</h3>
+                <h5>
+                    Steel head with lacquer finish<br>Hardwood handle with non-slip end grip
+                </h5>
+                <h4>eg 15 </h4>
+            </article>
+            <!-- end single product-->
+            <!-- single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/7SquarePointShovelwith-inHardwoodHandle.webp" 
+                        alt="product" 
+                        class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3> Square Point Shovel with 49 in. Hardwood Handle</h3>
+                <h5>    
+                    Steel head with lacquer finish<br>Hardwood handle with non-slip end grip
+                </h5>
+                <h4>eg 15 </h4>
+            </article>
+            <!-- end single product-->
+            <!-- single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="img/products/6D-HandleAluminumScoop.webp" 
+                         alt="product" 
+                         class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3>D-Handle Aluminum Scoop</h3>
+                <h5>
+                     Aluminum head <br> Hardwood handle <br> Dimensions: 49 in. x 14.75 in.
+                </h5>
+                <h4>eg15 </h4>
+            </article>
+            <!-- end single product-->
+           </div>
+         </section>
+        <!--End of products -->
+        <!--products-->
+        <section class="products">
+            <div class="section-title">
+             <h2>Electronic Tools</h2>
+            </div>
+            <div class="products-center" id="product-list">
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p1.png"
+                      alt="product"
+                     class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3> SEEKONE Mini Heat Gun</h3>
+                 <h5>
+                     
+                    SEEKONE Mini Heat Gun, 350W 662℉ (350℃) Fast Heat Handheld Hot Air Gun Tool with Reflector Nozzle<br>
+                    and 4.9Ft Long Cable Overload Protection for Craft Embossing, Shrink Wrapping and Stripping Paint
+                 </h5>
+                 <h4> eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p2.png" 
+                         alt="product"
+                         class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3> HengTianMei 128 in 1 Precision Screwdriver Set </h3>
+                 <h5>
+                    HengTianMei 128 in 1 Precision Screwdriver Set Professional Magnetic Repair Tool Kit for<br>
+                     Computer, Laptop, Xbox, Macbook, Game Console (H1128) 
+                </h5>
+                 <h4>eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p3.png" 
+                          alt="product" 
+                          class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3> Digital Angle Finder with Electronic Laser </h3>
+                 <h5>
+                            Digital Angle Finder with Electronic Laser - 4-side Strong Magnetic Angle Gauge,<br>
+                             Cube Inclinometer with Backlight, Table Saw Miter Protractor, Woodworking Measuring Tool, Level Box for Hanging 
+                 </h5>
+                 <h4>eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p4.png" 
+                          alt="product" 
+                          class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3> YIHUA 939D+ Digital Soldering Station</h3>
+                 <h5>
+                    YIHUA 939D+ Digital Soldering Station, 75W Equivalent with Precision Heat Control (392°F to 896°F)<br>
+                     and Built-in Transformer. ESD Safe, Lead Free with °C/°F display (Black) 
+                </h5>
+                 <h4>eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p5.png" 
+                          alt="product"
+                          class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3> Klein Tools BAT20GD1 Gear Cable Cutter</h3>
+                 <h5>                         
+                    Klein Tools BAT20GD1 Gear Cable Cutter Battery Operated Kit, Closed-Jaw, With Two 2 Ah Batteries,<br>
+                     Charger, and Bag      
+                </h5>
+                 <h4>eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p6.png" 
+                         alt="product" 
+                         class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3> Precision Screwdriver Set </h3>
+                 <h5>                          
+                    Precision Screwdriver Set, Laptop Screwdriver Kit, JAKEMY 164 in 1 Professional<br> Computers Screwdriver
+                     Repair Kit with T5 T6 Torx Screwdriver for MacBook, iPhone, Watch, Eyeglass, Xbox, Modding, DIY                    
+                </h5>
+                 <h4>eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                 <div class="img-container">
+                     <img src="img/electronics/p7.png" 
+                          alt="product" 
+                          class="product-img">
+                     <button class="bag-btn" data-id="1">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                     </button>
+                 </div>
+                 <h3>STREBITO Precision Screwdriver</h3>
+                 <h5>
+                    STREBITO Precision Screwdriver Set 191-Piece Multi-Bit Screwdriver 1/4 Inch Nut Driver Home Improvement<br>
+                     Tool Electronic Repair Kit for Computer, iPhone, Laptop, PC, Cell Phone, PS4, Xbox, Nintendo                  
+                </h5>
+                 <h4>eg15 </h4>
+             </article>
+             <!-- end single product-->
+             <!-- single product-->
+             <article class="product">
+                <div class="img-container">
+                    <img src="img/electronics/p8.png" 
+                         alt="product" 
+                         class="product-img">
+                    <button class="bag-btn" data-id="1">
+                         <i class="fas fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+                <h3>XYK Helping Hands Soldering Station</h3>
+                <h5>
+                  XYK Helping Hands Soldering Station with 3X Magnifying Glass with light,<br>
+                             4 Flexible Helping Hand Arms Magnifier and Third Hand Soldering Tool for Electronic Repair Soldering Jewelry Crafts 
+                </h5>
+                <h4>eg15 </h4>
+            </article>
+            <!-- end single product-->
+            </div>
+          </section>
+         <!--End of products -->
+        <!-- cart -->
+        <div class="cart-overlay"> <!-- .transparentBcg -->
+            <div class="cart">
+                <span class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>YOUR CART</h2>           
+                 <div class="cart-content">
+                    <!-- cart item -->
+                    <!-- <div class="cart-item">
+                    //cut dynamic
+                        <img src="img/features/3savings.png" 
+                        alt="product">
+                        <div>
+                            <h4> Queen </h4>
+                            <h5>$1000</h5>
+                            <span class="remove-item">remove</span>
+                        </div>
+                    <div>
+                        <i class="fas fa-chevron-up"></i>
+                        <p class="item-amount">1</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    </div> -->
+                    <!--end of cart item -->
+                </div>
+                <div class="cart-footer">
+                    <h3>Total: $ <span class="cart-total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                </div>
+            </div>
+        </div>
+         <!-- end cart -->
+         <footer class="section-p1" id="3">
+            <div class="col">
+                
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <img class="logo" src="logo-2.png" alt="" width="150">
+            </div>    
+            
+            <div class="copyright">
+                <p>@2023 </p>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+
+    </body>
+</html>    
